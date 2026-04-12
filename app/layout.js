@@ -22,7 +22,43 @@ export default function RootLayout({ children }) {
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col bg-zinc-50 dark:bg-black">
+        {/* Header */}
+        <header className="w-full bg-white/80 dark:bg-zinc-900/80 border-b border-zinc-200 dark:border-zinc-800 shadow-sm sticky top-0 z-30 backdrop-blur">
+          <div className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+            <a
+              href="/"
+              className="text-2xl font-bold tracking-tight text-zinc-900 dark:text-zinc-100"
+            >
+              MangaReader
+            </a>
+            <nav className="flex gap-6 text-zinc-700 dark:text-zinc-200 text-base font-medium">
+              <a
+                href="/"
+                className="hover:text-blue-600 dark:hover:text-blue-400 transition"
+              >
+                Home
+              </a>
+              <a
+                href="https://mangadex.org/"
+                target="_blank"
+                rel="noopener"
+                className="hover:text-blue-600 dark:hover:text-blue-400 transition"
+              >
+                MangaDex
+              </a>
+            </nav>
+          </div>
+        </header>
+        {/* Main Content */}
+        <main className="flex-1 w-full max-w-6xl mx-auto px-4 py-8">
+          {children}
+        </main>
+        {/* Footer */}
+        <footer className="w-full bg-white/80 dark:bg-zinc-900/80 border-t border-zinc-200 dark:border-zinc-800 py-4 text-center text-zinc-500 text-sm">
+          © {new Date().getFullYear()} MangaReader. Powered by MangaDex API.
+        </footer>
+      </body>
     </html>
   );
 }

@@ -1,4 +1,4 @@
-/** @type {import('next').NextConfig} */
+ck/** @type {import('next').NextConfig} */
 const nextConfig = {
   /* config options here */
 };

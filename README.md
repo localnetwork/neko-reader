@@ -20,6 +20,26 @@ You can start editing the page by modifying `app/page.js`. The page auto-updates
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
+## Manga Reader Features
+
+- Browse popular manga using the free [MangaDex API](https://api.mangadex.org)
+- View manga chapters with pagination
+- Sleek, modern UI with Tailwind CSS
+
+### Usage
+
+1. Run the development server:
+   ```bash
+   npm run dev
+   ```
+2. Open [http://localhost:3000](http://localhost:3000) in your browser.
+3. Browse manga, click a title to view chapters, and use pagination controls.
+
+### Notes
+
+- Cover images are placeholders; you can enhance with actual covers using the MangaDex API.
+- All data is fetched live from MangaDex.
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:
