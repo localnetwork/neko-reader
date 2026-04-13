@@ -14,7 +14,9 @@ export default function SearchPageContent() {
     if (!query) return;
     setLoading(true);
     fetch(
-      `https://api.mangadex.org/manga?title=${encodeURIComponent(query)}&limit=24&availableTranslatedLanguage[]=en&hasAvailableChapters=true&contentRating[]=safe`,
+      `/api/proxy?url=${encodeURIComponent(
+        `https://api.mangadex.org/manga?title=${encodeURIComponent(query)}&limit=24&availableTranslatedLanguage[]=en&hasAvailableChapters=true&contentRating[]=safe`,
+      )}`,
     )
       .then((res) => res.json())
       .then(async (data) => {
